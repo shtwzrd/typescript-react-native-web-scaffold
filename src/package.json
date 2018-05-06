@@ -1,0 +1,4 @@
+{
+    "name": "src",
+    "description": "let absolute imports from 'src/' resolve in React Native" 
+}
