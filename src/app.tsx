@@ -1,15 +1,6 @@
 import React from 'react';
-import { View, StyleSheet, Text, Platform } from 'react-native';
-import { PlatformInfo } from 'src/view/components/platform-info';
-
-const App = () => {
-    return (
-        <View style={styles.container}>
-            <Text style={styles.text}>[☕]</Text>
-            <PlatformInfo />
-        </View>
-    )
-};
+import {StyleSheet, Text, View} from 'react-native';
+import {PlatformInfo} from 'src/view/components/platform-info';
 
 const styles = StyleSheet.create({
     container: {
@@ -19,10 +10,18 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     text: {
-        color: "#00d8ff",
-        fontSize: 96 
+        color: '#00d8ff',
+        fontSize: 96
     }
 });
 
-export default App;
+const App = () => {
+    return (
+        <View style={styles.container}>
+            <Text style={styles.text}>[☕]</Text>
+            <PlatformInfo />
+        </View>
+    );
+};
 
+export default App;

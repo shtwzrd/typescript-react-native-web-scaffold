@@ -16,6 +16,12 @@
         "noEmitHelpers": true,
         "importHelpers": true,
         "noImplicitReturns": true,
-        "typeRoots": ["node_modules/@types"]
+        "typeRoots": ["node_modules/@types"],
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "forceConsistentCasingInFileNames": true,
+        "strictNullChecks": true,
+        "strictPropertyInitialization": true
     }
 }
