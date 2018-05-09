@@ -4,7 +4,7 @@ import App from 'src/app';
 import SignInForm from 'src/view/components/auth/signin-form';
 import Home from 'src/view/components/pages/home';
 
-// This is the primary navigator stack for the application
+// This is the navigator stack for the application post-login
 const AppNavigator = StackNavigator(
     {
         Landing: {

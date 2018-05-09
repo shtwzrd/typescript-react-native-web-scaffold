@@ -6,7 +6,7 @@ import {Dispatch} from 'redux';
 import {AppState} from 'src/state/store';
 
 const mapDispatchToProps = (dispatch: Dispatch<AppState>) => ({
-    dispatch
+    goToApp: () => dispatch({type: Navigation.NavigationActions.NAVIGATE, routeName: 'App'})
 });
 
 const SignInForm = (props: ReturnType<typeof mapDispatchToProps>) => {
@@ -14,10 +14,7 @@ const SignInForm = (props: ReturnType<typeof mapDispatchToProps>) => {
         <View style={{flex: 1, justifyContent: 'center', alignContent: 'center'}}>
             <Text style={{textAlign: 'center', fontSize: 24}}>Welcome</Text>
             <Text style={{textAlign: 'center', fontSize: 64}}>🙂</Text>
-            <Button
-                title="Login"
-                onPress={() => props.dispatch({type: Navigation.NavigationActions.NAVIGATE, routeName: 'App'})}
-            />
+            <Button title="Login" onPress={props.goToApp} />
         </View>
     );
 };

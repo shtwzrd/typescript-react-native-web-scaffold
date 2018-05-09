@@ -6,16 +6,13 @@ import {Dispatch} from 'redux';
 import {AppState} from 'src/state/store';
 
 const mapDispatchToProps = (dispatch: Dispatch<AppState>) => ({
-    dispatch
+    goToMain: () => dispatch({type: Navigation.NavigationActions.NAVIGATE, routeName: 'Main'})
 });
 
 const Home = (props: ReturnType<typeof mapDispatchToProps>) => {
     return (
         <View style={{flex: 1, justifyContent: 'center', alignContent: 'center'}}>
-            <Text
-                style={{textAlign: 'center', fontSize: 96}}
-                onPress={() => props.dispatch({type: Navigation.NavigationActions.NAVIGATE, routeName: 'Main'})}
-            >
+            <Text style={{textAlign: 'center', fontSize: 96}} onPress={props.goToMain}>
                 🏠
             </Text>
         </View>

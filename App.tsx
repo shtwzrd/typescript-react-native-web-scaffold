@@ -7,13 +7,12 @@ import {createReduxBoundAddListener} from 'react-navigation-redux-helpers';
 import {connect, Provider} from 'react-redux';
 import {Dispatch} from 'redux';
 import {NativeAppRootNavigator} from 'src/state/ducks/native-navigation';
-import {AppState, composeStore} from 'src/state/store';
+import {AppState, store} from 'src/state/store';
 
-const store = composeStore();
 const boundListener = createReduxBoundAddListener('root');
 
 class NativeApp extends Component<{dispatch: Dispatch<AppState>; navigation: Navigation.NavigationState}> {
-    public componentWillMount() {
+    public componentDidMount() {
         // set up handling for Android back button
         if (Platform.OS === 'android') {
             BackHandler.addEventListener('hardwareBackPress', () => {
